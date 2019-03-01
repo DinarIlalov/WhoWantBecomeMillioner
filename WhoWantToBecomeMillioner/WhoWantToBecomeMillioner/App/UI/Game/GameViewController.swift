@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameViewController.swift
 //  WhoWantToBecomeMillioner
 //
 //  Created by Dinar Ilalov on 01/03/2019.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
-
-
+    
 }
-

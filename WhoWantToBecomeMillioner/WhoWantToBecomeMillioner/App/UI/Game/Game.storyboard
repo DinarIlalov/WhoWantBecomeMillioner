@@ -34,49 +34,51 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpj-nQ-OMf">
-                                <rect key="frame" x="20" y="541" width="335" height="30"/>
+                                <rect key="frame" x="20" y="465" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cBb-U6-IO1"/>
                                 </constraints>
                                 <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueButtonDidTap:" destination="anx-6r-8iH" eventType="touchUpInside" id="Rnc-eO-AZ6"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yeu-Zb-MiL">
-                                <rect key="frame" x="20" y="591" width="335" height="68"/>
+                                <rect key="frame" x="20" y="515" width="335" height="144"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9R0-Ke-TLc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41k-fb-NUi">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41k-fb-NUi">
-                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="30"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-Qo-htg">
-                                                <rect key="frame" x="171.5" y="0.0" width="163.5" height="30"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MMN-dC-QvT">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButtonDidTap:" destination="anx-6r-8iH" eventType="touchUpInside" id="pKt-uc-V58"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-Qo-htg">
                                         <rect key="frame" x="0.0" y="38" width="335" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRy-XQ-oX1">
-                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="30"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG0-ex-vNj">
-                                                <rect key="frame" x="171.5" y="0.0" width="163.5" height="30"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButtonDidTap:" destination="anx-6r-8iH" eventType="touchUpInside" id="Sti-Zx-462"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRy-XQ-oX1">
+                                        <rect key="frame" x="0.0" y="76" width="335" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButtonDidTap:" destination="anx-6r-8iH" eventType="touchUpInside" id="5ti-kv-QRU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG0-ex-vNj">
+                                        <rect key="frame" x="0.0" y="114" width="335" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButtonDidTap:" destination="anx-6r-8iH" eventType="touchUpInside" id="nbo-Eg-FRh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="dH9-iR-0Wq"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,6 +98,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BSm-9y-0aj"/>
                     </view>
+                    <connections>
+                        <outlet property="answerAButton" destination="41k-fb-NUi" id="E7C-Av-4GU"/>
+                        <outlet property="answerBButton" destination="DMU-Qo-htg" id="cVZ-Ja-975"/>
+                        <outlet property="answerCButton" destination="WRy-XQ-oX1" id="wk2-Zk-lXY"/>
+                        <outlet property="answerDButton" destination="mG0-ex-vNj" id="bMt-cO-x4Z"/>
+                        <outlet property="continueButton" destination="Jpj-nQ-OMf" id="He0-DL-3Pb"/>
+                        <outlet property="questionTextLabel" destination="H7l-0P-hbh" id="Ww4-l4-V0u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWd-eL-24x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,8 +12,28 @@ final class Game {
     
     // MARK: Singleton
     static let shared = Game()
-    private init() {}
     
     // MARK: Properties
     var session: GameSession?
+    
+    private(set) var records: [Record] = [] {
+        didSet {
+            try? self.recordsStorage.saveRecords(self.records)
+        }
+    }
+    
+    private let recordsStorage = RecordsStorage()
+    
+    // MARK: Init
+    private init() {
+        self.records = (try? self.recordsStorage.loadRecords()) ?? []
+    }
+    
+    func addRecord(_ record: Record) {
+        self.records.append(record)
+    }
+    
+    func clearRecords() {
+        self.records = []
+    }
 }

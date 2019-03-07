@@ -19,6 +19,8 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var continueButton: UIButton!
     
+    @IBOutlet weak var currentQuestionLabel: UILabel!
+    
     // MARK: Properties
     
     // MARK: Dependicies
@@ -28,6 +30,11 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         showQuestion()
+        
+        Game.shared.session?.currentQuestionIndex
+            .addObserver(self, options: [.new, .initial]) { [weak self] (newValue, _) in
+                self?.currentQuestionLabel.text = "Question № \(newValue + 1):"
+        }
     }
     
     // MARK: Actions
@@ -81,6 +88,7 @@ class GameViewController: UIViewController {
     
     private func endGame() {
         gameDelegate?.endGame()
+        Game.shared.session = nil
         dismiss(animated: true, completion: nil)
     }
 }

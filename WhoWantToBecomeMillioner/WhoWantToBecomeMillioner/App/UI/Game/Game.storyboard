@@ -104,6 +104,7 @@
                         <outlet property="answerCButton" destination="WRy-XQ-oX1" id="wk2-Zk-lXY"/>
                         <outlet property="answerDButton" destination="mG0-ex-vNj" id="bMt-cO-x4Z"/>
                         <outlet property="continueButton" destination="Jpj-nQ-OMf" id="He0-DL-3Pb"/>
+                        <outlet property="currentQuestionLabel" destination="fx7-F7-hR7" id="YQb-bz-ppQ"/>
                         <outlet property="questionTextLabel" destination="H7l-0P-hbh" id="Ww4-l4-V0u"/>
                     </connections>
                 </viewController>

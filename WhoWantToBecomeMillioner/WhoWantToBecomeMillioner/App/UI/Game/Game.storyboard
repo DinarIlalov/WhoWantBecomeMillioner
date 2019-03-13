@@ -80,19 +80,66 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rpz-Vt-Qhg">
+                                <rect key="frame" x="12" y="413" width="351" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1w-uV-wno">
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="50/50">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled" title="can't use"/>
+                                        <connections>
+                                            <action selector="hintButtonDidTap:" destination="anx-6r-8iH" eventType="touchUpInside" id="2Wq-do-zPT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSq-ML-DND">
+                                        <rect key="frame" x="121" y="0.0" width="109" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Call friend">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled" title="can't use"/>
+                                        <connections>
+                                            <action selector="hintButtonDidTap:" destination="anx-6r-8iH" eventType="touchUpInside" id="xIf-nS-aEP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFV-bM-66f">
+                                        <rect key="frame" x="242" y="0.0" width="109" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Auditory">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled" title="can't use"/>
+                                        <connections>
+                                            <action selector="hintButtonDidTap:" destination="anx-6r-8iH" eventType="touchUpInside" id="jFR-3H-M2D"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pcu-Ag-zGA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fx7-F7-hR7" firstAttribute="top" secondItem="BSm-9y-0aj" secondAttribute="top" constant="15" id="1yx-xx-S6b"/>
                             <constraint firstItem="H7l-0P-hbh" firstAttribute="leading" secondItem="BSm-9y-0aj" secondAttribute="leading" constant="18" id="97X-dF-2aD"/>
+                            <constraint firstItem="BSm-9y-0aj" firstAttribute="trailing" secondItem="Rpz-Vt-Qhg" secondAttribute="trailing" constant="12" id="Hsg-pc-0lV"/>
                             <constraint firstItem="H7l-0P-hbh" firstAttribute="top" secondItem="fx7-F7-hR7" secondAttribute="bottom" constant="18" id="JG1-T9-6C1"/>
                             <constraint firstItem="BSm-9y-0aj" firstAttribute="bottom" secondItem="Yeu-Zb-MiL" secondAttribute="bottom" constant="8" id="LY4-WI-C2z"/>
                             <constraint firstItem="BSm-9y-0aj" firstAttribute="trailing" secondItem="Yeu-Zb-MiL" secondAttribute="trailing" constant="20" id="Rfn-II-UsV"/>
-                            <constraint firstItem="Jpj-nQ-OMf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H7l-0P-hbh" secondAttribute="bottom" constant="18" id="Sst-NX-f0l"/>
+                            <constraint firstItem="Jpj-nQ-OMf" firstAttribute="top" secondItem="Rpz-Vt-Qhg" secondAttribute="bottom" constant="8" id="S3U-Gb-DcR"/>
+                            <constraint firstItem="Rpz-Vt-Qhg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H7l-0P-hbh" secondAttribute="bottom" constant="18" id="Sst-NX-f0l"/>
                             <constraint firstItem="BSm-9y-0aj" firstAttribute="trailing" secondItem="Jpj-nQ-OMf" secondAttribute="trailing" constant="20" id="T1K-Pk-JWW"/>
                             <constraint firstItem="fx7-F7-hR7" firstAttribute="centerX" secondItem="BBP-uG-kaj" secondAttribute="centerX" id="UbB-ZP-iJx"/>
                             <constraint firstItem="Yeu-Zb-MiL" firstAttribute="top" secondItem="Jpj-nQ-OMf" secondAttribute="bottom" constant="20" id="Y9t-ZB-L60"/>
                             <constraint firstItem="Jpj-nQ-OMf" firstAttribute="leading" secondItem="BSm-9y-0aj" secondAttribute="leading" constant="20" id="gku-l2-nzU"/>
+                            <constraint firstItem="Rpz-Vt-Qhg" firstAttribute="leading" secondItem="BSm-9y-0aj" secondAttribute="leading" constant="12" id="lTz-4T-rkq"/>
                             <constraint firstItem="BSm-9y-0aj" firstAttribute="trailing" secondItem="H7l-0P-hbh" secondAttribute="trailing" constant="18" id="nzn-SQ-zgk"/>
                             <constraint firstItem="Yeu-Zb-MiL" firstAttribute="leading" secondItem="BSm-9y-0aj" secondAttribute="leading" constant="20" id="zjZ-Ru-gKE"/>
                         </constraints>
@@ -105,6 +152,9 @@
                         <outlet property="answerDButton" destination="mG0-ex-vNj" id="bMt-cO-x4Z"/>
                         <outlet property="continueButton" destination="Jpj-nQ-OMf" id="He0-DL-3Pb"/>
                         <outlet property="currentQuestionLabel" destination="fx7-F7-hR7" id="YQb-bz-ppQ"/>
+                        <outlet property="hint50to50Button" destination="D1w-uV-wno" id="bYH-sk-gzX"/>
+                        <outlet property="hintAuditoryHelpButton" destination="OFV-bM-66f" id="rHs-Wr-bpW"/>
+                        <outlet property="hintCallFrienButton" destination="cSq-ML-DND" id="NTC-Gf-YrB"/>
                         <outlet property="questionTextLabel" destination="H7l-0P-hbh" id="Ww4-l4-V0u"/>
                     </connections>
                 </viewController>

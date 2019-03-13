@@ -13,6 +13,8 @@ final class GameSession {
     private let questions: [Question]
     private(set) var currentQuestionIndex: Observable<Int> = Observable(-1)
     
+    let hintUsageFacade: HintUsageFacade = HintUsageFacade()
+    
     init() {
         
         let strategy: QuestionsOrderStrategy
@@ -34,7 +36,10 @@ extension GameSession: GameControllerDelegate {
             return nil
         }
         currentQuestionIndex.value += 1
-        return questions[currentQuestionIndex.value]
+        
+        let currentQuestion = questions[currentQuestionIndex.value]
+        hintUsageFacade.currentQuestion = currentQuestion
+        return currentQuestion
     }
     
     func answerIsCorrect(_ answer: String) -> Bool {

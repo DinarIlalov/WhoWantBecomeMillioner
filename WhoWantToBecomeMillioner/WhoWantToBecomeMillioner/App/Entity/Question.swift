@@ -11,7 +11,7 @@ import Foundation
 struct Question: Codable {
     let text: String
     let correctAnswer: String
-    let answers: [String]
+    let answers: [Int]  // индексы ответов
     let wrongAnswers: [String]
     
     init(text: String, correctAnswer: String, wrongAnswers: [String]) {
@@ -19,9 +19,19 @@ struct Question: Codable {
         self.correctAnswer = correctAnswer
         self.wrongAnswers = wrongAnswers
         
-        var allAnswers = wrongAnswers
-        allAnswers.append(correctAnswer)
-        
-        self.answers = allAnswers.shuffled()
+        // -1 - correct answer
+        self.answers = [-1, 0, 1, 2].shuffled()
+    }
+    
+    func answersText() -> [String] {
+        var answersText: [String] = []
+        for answerIndex in answers {
+            if answerIndex == -1 {
+                answersText.append(correctAnswer)
+            } else {
+                answersText.append(self.wrongAnswers[answerIndex])
+            }
+        }
+        return answersText
     }
 }

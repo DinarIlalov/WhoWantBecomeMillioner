@@ -19,6 +19,7 @@ extension Question {
         
         let answers = ["A", "B", "C", "D"]
         
+        // просто рандомная генерация вопросов и ответов
         for iterator in 1...30 {
             var answers2 = answers
             let correctAnswer = answers2.remove(at: Int.random(in: 0...3))

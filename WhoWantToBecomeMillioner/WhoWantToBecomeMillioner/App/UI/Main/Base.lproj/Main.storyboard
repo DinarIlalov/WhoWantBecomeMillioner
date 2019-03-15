@@ -18,27 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLe-gV-7mi">
-                                <rect key="frame" x="151" y="148" width="73" height="30"/>
-                                <state key="normal" title="New game"/>
-                                <connections>
-                                    <segue destination="h3x-fV-Fgq" kind="show" identifier="toGameViewController" id="0x1-SF-oEr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nY-WY-OFf">
-                                <rect key="frame" x="162" y="224" width="51" height="30"/>
-                                <state key="normal" title="Results"/>
-                                <connections>
-                                    <segue destination="b6f-mW-KKL" kind="show" id="8yu-mu-ro4"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="MF0-Xy-rKi">
+                                <rect key="frame" x="127.5" y="148" width="120" height="241"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLe-gV-7mi">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="New game"/>
+                                        <connections>
+                                            <segue destination="h3x-fV-Fgq" kind="show" identifier="toGameViewController" id="0x1-SF-oEr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nY-WY-OFf">
+                                        <rect key="frame" x="0.0" y="69" width="120" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Results"/>
+                                        <connections>
+                                            <segue destination="b6f-mW-KKL" kind="show" id="8yu-mu-ro4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6j-WN-fop">
+                                        <rect key="frame" x="0.0" y="138" width="120" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Settings"/>
+                                        <connections>
+                                            <segue destination="tlr-f3-LT4" kind="show" id="YsA-aV-03v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzO-Hx-ffx">
+                                        <rect key="frame" x="0.0" y="207" width="120" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Your questions"/>
+                                        <connections>
+                                            <segue destination="beE-e3-i7S" kind="show" id="WC5-KR-Ka7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aLe-gV-7mi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UEx-mk-SrI"/>
-                            <constraint firstItem="aLe-gV-7mi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="Y2k-bH-kZd"/>
-                            <constraint firstItem="5nY-WY-OFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iN5-Tq-DIJ"/>
-                            <constraint firstItem="5nY-WY-OFf" firstAttribute="top" secondItem="aLe-gV-7mi" secondAttribute="bottom" constant="46" id="t59-gO-ARC"/>
+                            <constraint firstItem="MF0-Xy-rKi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3wI-HS-CjL"/>
+                            <constraint firstItem="MF0-Xy-rKi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="yac-I6-7fb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -52,7 +73,7 @@
                 <viewControllerPlaceholder storyboardName="Game" id="h3x-fV-Fgq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYP-XG-Jf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706" y="-79"/>
+            <point key="canvasLocation" x="692" y="225"/>
         </scene>
         <!--Records-->
         <scene sceneID="nsh-kh-4uw">
@@ -60,7 +81,23 @@
                 <viewControllerPlaceholder storyboardName="Records" id="b6f-mW-KKL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNv-eA-Bag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="423"/>
+            <point key="canvasLocation" x="704" y="363"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="hgg-56-mSg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="tlr-f3-LT4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mwO-fV-wka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705" y="469"/>
+        </scene>
+        <!--UserQuestions-->
+        <scene sceneID="yxd-ef-Xus">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserQuestions" id="beE-e3-i7S" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GN6-en-D43" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736" y="575"/>
         </scene>
     </scenes>
 </document>
